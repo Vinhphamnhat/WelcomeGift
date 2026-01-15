@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng quay may mắn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f5f5f5;
+            padding-top: 100px;
+        }
+        .box {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            background: #ff9800;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e68900;
+        }
+        #gift {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🎉 Nhận phần quà may mắn 🎉</h2>
+    <p>Nhấn nút bên dưới để mở quà:</p>
+    <button onclick="getGift()">🎁 Nhận quà</button>
+    <div id="gift"></div>
+</div>
+
+<script>
+    function getGift() {
+        const gifts = [
+            "🎁 Phần quà 1: Voucher 50.000đ",
+            "🎁 Phần quà 2: Ly nước miễn phí",
+            "🎁 Phần quà 3: Móc khóa dễ thương"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * gifts.length);
+        document.getElementById("gift").innerText = gifts[randomIndex];
+    }
+</script>
+
+</body>
+</html>
